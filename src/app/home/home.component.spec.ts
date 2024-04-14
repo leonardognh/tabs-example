@@ -20,7 +20,6 @@ describe('HomeComponent', () => {
         CarBrandComponent,
         CarReviewComponent,
       ],
-      declarations: [HomeComponent],
       providers: [HelperService],
     }).compileComponents();
     fixture = TestBed.createComponent(HomeComponent);
