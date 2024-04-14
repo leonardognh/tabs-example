@@ -1,21 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TabsComponent } from './tabs.component';
+import { CommonModule } from '@angular/common';
+import { SelectOptionComponent } from './select-option/select-option.component';
 
 describe('TabsComponent', () => {
   let component: TabsComponent;
   let fixture: ComponentFixture<TabsComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [TabsComponent],
-    }).compileComponents();
-  });
-
   beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [CommonModule, SelectOptionComponent],
+    }).compileComponents();
     fixture = TestBed.createComponent(TabsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
