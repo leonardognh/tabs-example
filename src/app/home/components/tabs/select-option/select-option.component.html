@@ -1,0 +1,14 @@
+<mat-form-field>
+  <mat-label>Choose one</mat-label>
+  <mat-select [formControl]="optionSelected">
+    <mat-option>Clear</mat-option>
+    @for (tab of options; track tab) {
+    <mat-option [value]="tab">
+      {{ tab.label }}
+    </mat-option>
+    }
+  </mat-select>
+  @if (optionSelected.hasError('required')) {
+  <mat-error>Required Field!</mat-error>
+  }
+</mat-form-field>

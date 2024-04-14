@@ -1,0 +1,18 @@
+<mat-grid-list cols="3" rowHeight="2:1">
+  @for (color of colors; track color) {
+  <mat-grid-tile>
+    <mat-card
+      class="w-100 m-1 cursor-click"
+      [class.active]="color === active"
+      (click)="save(color)"
+    >
+      <mat-card-content>{{ color }}</mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  }
+  <mat-grid-tile>
+    <mat-card class="w-100 m-1 cursor-click" (click)="clear()">
+      <mat-card-content>Clear</mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
